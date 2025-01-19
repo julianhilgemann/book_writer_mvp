@@ -1,0 +1,8 @@
+openai
+langchain
+python-dotenv
+pyyaml
+tqdm
+rich
+nltk
+pdfkit

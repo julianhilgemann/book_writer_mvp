@@ -1,0 +1,19 @@
+# settings.yaml (User input configurations)
+book_title: "Automated Book Title"
+author: "AI Writer"
+writing_style: "Narrative"
+word_count:
+  book: 50000
+  chapter: 5000
+  block: 1000
+chapters:
+  - title: "Introduction"
+    blocks:
+      - { description: "Overview of the book", word_count: 1000 }
+      - { description: "Why this topic matters", word_count: 1000 }
+  - title: "Chapter 1"
+    blocks:
+      - { description: "Historical background", word_count: 1000 }
+      - { description: "Current relevance", word_count: 1000 }
+
+

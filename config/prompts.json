@@ -1,0 +1,6 @@
+# prompts.json (Predefined prompt templates)
+{
+  "general_prompt": "Write in {writing_style} style with a focus on {book_topic}.",
+  "chapter_prompt": "Generate content for {chapter_title}, ensuring coherence with the book's style.",
+  "block_prompt": "Expand on {block_description} within {word_count} words."
+}
