@@ -1,20 +1,23 @@
-import openai
+import os
+from openai import OpenAI
+from dotenv import load_dotenv
 
-# Replace this with your OpenAI API key
-OPENAI_API_KEY = "your-openai-api-key"
+# Load environment variables from .env file
+load_dotenv()
 
-# Set up the OpenAI client
-openai.api_key = OPENAI_API_KEY
+# Initialize OpenAI client
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))  # This is optional; by default, it reads from env
 
-# Define a simple prompt
-prompt = "Tell me a short fun fact about space."
-
-# Call OpenAI's ChatCompletion API
-response = openai.ChatCompletion.create(
-    model="gpt-4",  # Or "gpt-3.5-turbo"
-    messages=[{"role": "user", "content": prompt}]
+# Generate a chat completion
+chat_completion = OpenAI().chat.completions.create(
+    model="gpt-4o",
+    messages=[
+        {
+            "role": "user",
+            "content": "generate one word",
+        }
+    ],
 )
 
-# Extract and print the generated text
-generated_text = response["choices"][0]["message"]["content"]
-print("\nGenerated Text:\n", generated_text)
+# Print the AI's response
+print(chat_completion.choices[0].message.content)
